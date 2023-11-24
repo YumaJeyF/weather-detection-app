@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.min.css?_v=20231124221210">
+        <script defer src="js/main.min.js?_v=20231124221210"></script>
+        <title>Виджет погоды</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="container__load container__load--active">
+        </div>
+        <header class="header">
+            <div class="header__body">
+                <div class="city">
+                    <h1 class="city__name"></h1>
+                    <div class="city__btns">
+                        <button class="city__btn-temp city__btn-temp--active">C</button>
+                        <button class="city__btn-temp">F</button>
+                    </div>
+                </div>
+                <div class="change-inf">
+                    <p class="title title--change" id="change-city">Сменить город</p>
+                    <div class="change-inf__popup">
+                        <label class="change-inf__label">
+                            <input type="text" name="name-city" class="change-inf__textfield">
+                            <button class="change-inf__button">OK</button>
+                        </label>
+                    </div>
+                    <div class="change-inf__location">
+                        <img src="img/arrow.svg" alt="arrow" class="change-inf__icon">
+                        <p class="title title--location" id="my-location">Моё местоположение</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__body">
+                <div class="temperature">
+                    <div class="temperature__inf">
+                        <p class="temperature__number"></p>
+                        <span class="temperature__degree"></span>
+                    </div>
+                </div>
+                <p class="main__text"></p>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__body">
+                <div class="add-inf">
+                    <div class="add-inf__content">
+                        <h5 class="title">Ветер</h5>
+                        <p class="add-inf__text"></p>
+                    </div>
+                    <div class="add-inf__content">
+                        <h5 class="title">Давление</h5>
+                        <p class="add-inf__text"></p>
+                    </div>
+                    <div class="add-inf__content">
+                        <h5 class="title">Влажность</h5>
+                        <p class="add-inf__text"></p>
+                    </div>
+                    <div class="add-inf__content">
+                        <h5 class="title">Облачность</h5>
+                        <p class="add-inf__text"></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

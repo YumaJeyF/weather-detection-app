@@ -1,0 +1,49 @@
+// Подключение переменных
+
+@use './_vars' as *;
+
+// Подключение расширений
+
+@use './extends';
+
+// Подключение миксинов
+
+@use './mixins';
+
+@use '../fonts';
+
+// Style for footer
+
+.add-inf {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10em;
+    @media (max-width: 1090px) {
+        gap: 5em;
+    }
+    @media (max-width: 728px) {
+        gap: 2.5em;
+    }
+    @media (max-width: 536px) {
+        display: block;
+    }
+
+    &__content {
+        @media (max-width: 536px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 0;
+        font-size: $big;
+        color: $wh;
+        font-weight: 700;
+        margin-top: 10px;
+        @media (max-width: 484px) {
+            font-size: $mid;
+        }
+
+    }
+}

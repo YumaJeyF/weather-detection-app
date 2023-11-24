@@ -1,0 +1,110 @@
+// Подключение переменных
+
+@use './_vars' as *;
+
+// Подключение расширений
+
+@use './extends';
+
+// Подключение миксинов
+
+@use './mixins';
+
+// Подключение основных файлов стилей\
+
+@use './components/_header';
+@use './components/_footer';
+
+// Основные стили
+
+// Style for main
+
+.main {
+
+    &__body {
+        margin: 190px 0 208px 0;
+        @media (max-width: 484px) {
+            margin: 100px 0 100px 0;
+        }
+        @media (max-width: 360px) {
+            margin: 70px 0 70px 0;
+        }
+    }
+
+    &__text {
+        font-size: $big;
+        color: $wh;
+        line-height: 30px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 484px) {
+            font-size: $mid;
+        }
+        @media (max-width: 271px) {
+            font-size: $fz;
+        }
+    }
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    justify-content: center;
+    @media (max-width: 360px) {
+        gap: 15px;
+    }
+
+    &__icon {
+        width: 138px;
+        height: 138px;
+        margin: auto;
+        @media (max-width: 484px) {
+            width: 80px;
+            height: 80px;
+        }
+        @media (max-width: 271px) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__inf {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__number {
+        font-size: 180px;
+        margin: 0;
+        font-weight: bolder;
+        color: $wh;
+        @media (max-width: 576px) {
+            font-size: 120px;
+        }
+        @media (max-width: 484px) {
+            font-size: 100px;
+        }
+        @media (max-width: 271px) {
+            font-size: 70px;
+        }
+    }
+
+    &__degree {
+        color: $wh;
+        font-size: 80px;
+        font-weight: bolder;
+        @media (max-width: 576px) {
+            font-size: 60px;
+        }
+        @media (max-width: 484px) {
+            font-size: $title;
+        }
+        @media (max-width: 271px) {
+            font-size: 35px;
+        }
+    }
+}
+
+
